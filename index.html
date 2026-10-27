@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Agriculture AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="logo">
+                🌱
+            </div>
+
+            <h1>Smart Agriculture AI</h1>
+
+            <p>
+                Monitor soil, weather and crops with AI-powered recommendations
+            </p>
+
+        </header>
+
+
+        <main>
+
+            <!-- SENSOR CARDS -->
+
+            <section class="sensor-grid">
+
+                <div class="sensor-card">
+
+                    <span>🌱</span>
+
+                    <h3>Soil Moisture</h3>
+
+                    <strong id="moistureValue">32%</strong>
+
+                    <p id="moistureStatus">Low</p>
+
+                </div>
+
+
+                <div class="sensor-card">
+
+                    <span>🌡️</span>
+
+                    <h3>Temperature</h3>
+
+                    <strong id="temperatureValue">31°C</strong>
+
+                    <p>Current</p>
+
+                </div>
+
+
+                <div class="sensor-card">
+
+                    <span>💧</span>
+
+                    <h3>Humidity</h3>
+
+                    <strong id="humidityValue">58%</strong>
+
+                    <p>Current</p>
+
+                </div>
+
+
+                <div class="sensor-card">
+
+                    <span>🌧️</span>
+
+                    <h3>Rain Probability</h3>
+
+                    <strong id="rainValue">10%</strong>
+
+                    <p>Today</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- FARM INPUT -->
+
+            <section class="farm-card">
+
+                <h2>🌾 Farm Conditions</h2>
+
+
+                <div class="form-grid">
+
+                    <div>
+
+                        <label>Crop</label>
+
+                        <select id="crop">
+
+                            <option>Tomato</option>
+                            <option>Rice</option>
+                            <option>Wheat</option>
+                            <option>Maize</option>
+                            <option>Potato</option>
+                            <option>Cotton</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Growth Stage</label>
+
+                        <select id="growthStage">
+
+                            <option>Seedling</option>
+                            <option>Vegetative</option>
+                            <option>Flowering</option>
+                            <option>Harvest</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Soil Type</label>
+
+                        <select id="soilType">
+
+                            <option>Loamy</option>
+                            <option>Clay</option>
+                            <option>Sandy</option>
+                            <option>Silty</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sensor Inputs -->
+
+                <div class="input-grid">
+
+                    <div>
+
+                        <label>
+                            Soil Moisture (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="moisture"
+                            value="32"
+                            min="0"
+                            max="100"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Temperature (°C)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="temperature"
+                            value="31"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Humidity (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="humidity"
+                            value="58"
+                            min="0"
+                            max="100"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Rain Probability (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="rain"
+                            value="10"
+                            min="0"
+                            max="100"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button id="analyzeBtn">
+                    🤖 Analyze Farm Conditions
+                </button>
+
+            </section>
+
+
+            <!-- IRRIGATION -->
+
+            <section id="irrigationCard" class="result-card">
+
+                <h2>💧 Irrigation Recommendation</h2>
+
+                <div id="irrigationResult">
+
+                    Enter your farm conditions and
+                    click analyze.
+
+                </div>
+
+            </section>
+
+
+            <!-- AI ADVICE -->
+
+            <section id="aiCard" class="result-card">
+
+                <h2>🤖 AI Agriculture Advisor</h2>
+
+                <div id="aiResult">
+
+                    AI recommendations will appear here.
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                Smart Agriculture AI • Powered by Gemini
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
